@@ -1,0 +1,19 @@
+h1 vendorpage
+
+if (errorMessage)
+    p #{errorMessage}
+if (successMessage)
+    p #{successMessage}
+
+a(href='/vendor/order') CheckOrders
+
+form(action='/vendor', method='POST')
+    .form-group
+        label(for='vendor_id') Vendor ID
+        input#location.form-control(type='vendor_id', name='vendor_id', placeholder='Enter vendor id')
+    .form-group
+        label(for='location') Location
+        input#location.form-control(type='location', name='location', placeholder='Enter Location')
+    
+    button.btn.btn-primary(type='ready') Ready for orders
+

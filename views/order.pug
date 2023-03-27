@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/order.css')
+    block head
+body
+    
+    h1 Outstanding Orders
+    if(successMessage)
+        p #{successMessage}
+    if(orders)
+        each product in orders
+            if(product.OrderStatus === "Outstanding")
+                p OrderID: #{product.OrderID}
+        
+                each snack in product.OrderedProduct
+                    p Snack Name: #{snack.snack_name}
+                    p Quantity: #{snack.quantity}
+
+                p OrderStatus: #{product.OrderStatus}
+                p CustomerInfo: #{product.CustomerInfo}
+                p OrderedTime: #{product.OrderedTime}
+                p Total Price: $#{product.totalPrice}
+
+                form(action = '/vendor/order', method = "POST")
+                        input(type="hidden" name="OrderID" value= product.OrderID)
+                        button.btn(type="complete") Complete Order
+                br
+    h2 Fullfilled Orders
+    if(orders)
+        each product in orders
+            if(product.OrderStatus === "Fulfilled")
+                p OrderID: #{product.OrderID}
+        
+                each snack in product.OrderedProduct
+                    p Snack Name: #{snack.snack_name}
+                    p Quantity: #{snack.quantity}
+
+                p OrderStatus: #{product.OrderStatus}
+                p CustomerInfo: #{product.CustomerInfo}
+                p OrderedTime: #{product.OrderedTime}
+                p Total Price: $#{product.totalPrice}
+                br

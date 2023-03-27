@@ -1,0 +1,125 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  height: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.form-group {
+  height: 100px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+input {
+  border: none;
+  background-color: antiquewhite;
+  height: 30px;
+  outline: none;
+}
+
+.input {
+  border-bottom: gray 1px solid;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 358.4px;
+  border: none;
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 100px;
+  color: #ffffff;
+  font-size: 15px;
+  filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#FF69B4,endColorStr=#FFFF00);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #FF69B4, #FFFF00);
+  /* firefox */
+  background: -moz-linear-gradient(left, #FF69B4, #FFFF00);
+  /*Safari5.1 Chrome 10+*/
+  background: -webkit-linear-gradient(left, #FF69B4, #FFFF00);
+  /*Opera 11.10+*/
+  background: -o-linear-gradient(left, #FF69B4, #FFFF00);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.contact {
+  height: 30px;
+  margin-top: 100px;
+}
+
+.line {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.darkblue {
+  color: royalblue;
+}
+
+.bottombtn1 {
+  position: relative;
+  top: 80px;
+  float: left;
+  color: #708090;
+}
+
+.bottombtn2 {
+  position: relative;
+  top: 80px;
+  float: right;
+  color: #708090;
+}
+
+body {
+  /* font-weight: bold; */
+}
+
+.ok {
+  margin-top: 20px;
+  border-top: 1px gray solid;
+  padding: 15px 10px 0 10px;
+  margin: 20px 10px 0px 10px;
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.warning {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100px;
+  width: 300px;
+  margin-left: 30px;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  .bottombtn1 {
+    font-size: 15px;
+  }
+  .bottombtn2 {
+    font-size: 15px;
+  }
+}

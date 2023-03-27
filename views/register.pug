@@ -1,0 +1,25 @@
+h1 Register
+if(errorMessage)
+    p #{errorMessage}
+if(successMessage)
+    p #{successMessage}
+form(action='/customer/menu/login/register', method='POST')
+    .form-group
+        label(for='last_name') Last Name 
+        input(type="last_name", name="last_name", value=last_name)
+    .form-group
+        label(for='first_name') First Name 
+        input(type="first_name", name="first_name", value=first_name)
+    .form-group
+        label(for='email') Email
+        input(type="email", name="email", value=email)
+    .form-group
+        label(for='password') Create password
+        input(type="password", name="password", value=password)
+    .form-group
+        label(for='confirm_password') Confirm password
+        input(type="password", name="confirm_password", value=confirm_password)
+    button(type='submit') Register 
+
+    p Already have an account?
+    a(href='/customer/menu/login') Login

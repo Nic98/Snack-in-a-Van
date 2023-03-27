@@ -1,0 +1,176 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/menu.css')
+    script(src='https://kit.fontawesome.com/d66b1d76b9.js' crossorigin='anonymous')
+    block head
+body
+    .header
+        span
+            a.icon(href="/customer")
+                icon.fas.fa-chevron-left.fa-3x
+        if(user)
+            a.hi(href='/customer/menu/dashboard') Hi, #{user.first_name}
+        else
+            a.hi(href='/customer/menu/login') Log in
+        span
+            a.cart(href='/customer/menu/cart')
+                icon.fas.fa-cart-plus.fa-3x
+        if(totalQty)
+            span
+                badge.Qty #{totalQty}
+    .menuHeader
+        br
+        span 
+            a.navButton(href="#coffee") coffee 
+        span 
+            a.navButton(href="#biscuit") biscuit 
+        span 
+            a.navButton(href="#cake") cake  
+    if(successMessage)
+        p #{successMessage}
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    h1#coffee.menuTitle COFFEE
+    .menucontainer
+        if(menu)
+            each product,id in menu
+                if(product.type==="COFFEE")
+                    .itemContainer
+                        img.fooditempicture(src=product.link_address width='200px' height='200px')
+                        .itemContainerText
+                            span.snackname #{product.snack_name}
+                                
+                            span.itemPrice $ #{product.price.toFixed(2)}
+                            //p #{product.type}
+                            //p #{product.add_on}
+                            //p #{product.size}
+                            br
+                            br
+                            span.itemDetail #{product.mass}
+                            span.itemDetail |    
+                            span.itemDetail #{product.calories}
+                            button.btn(type="plus", onclick='myFunction(\'' + id + '\')') +
+                            .product_detail
+                                button.times(type="plus", onclick='myFunction(\'' + id + '\')')
+                                    icon.fas.fa-times.fa-3x
+                                img.foodDetail(src=product.link_address width='400px' height='400px')
+                                .snackname #{product.snack_name}
+                                .buttonContainer
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[0].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[0].split(':')[1]}
+                                    button.sizeMedium  
+                                        .sizeText #{product.size.split(',')[1].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[1].split(':')[1]}
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[2].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[2].split(':')[1]}
+                                span.itemDetailPrice Price: $ #{product.price.toFixed(2)}
+                                //p #{product.type}
+                                //p #{product.add_on}
+                                form(method="get" action=("menu/add-to-cart/" + product._id))
+                                    button.addToCart add to cart
+                    br
+    h1#biscuit.menuTitle BISCUIT
+    .menucontainer
+        if(menu)
+            each product,id in menu
+                if(product.type==="BISCUIT")
+                    .itemContainer
+                        img.fooditempicture(src=product.link_address width='200px' height='200px')
+                        .itemContainerText
+                            span.snackname #{product.snack_name}
+                                
+                            span.itemPrice $ #{product.price.toFixed(2)}
+                            //p #{product.type}
+                            //p #{product.add_on}
+                            //p #{product.size}
+                            br
+                            br
+                            span.itemDetail #{product.mass}
+                            span.itemDetail |    
+                            span.itemDetail #{product.calories}
+                            button.btn(type="plus", onclick='myFunction(\'' + id + '\')') +
+                            .product_detail
+                                button.times(type="plus", onclick='myFunction(\'' + id + '\')')
+                                    icon.fas.fa-times.fa-3x
+                                img.foodDetail(src=product.link_address width='400px' height='400px')
+                                .snackname #{product.snack_name}
+                                .buttonContainer
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[0].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[0].split(':')[1]}
+                                    button.sizeMedium  
+                                        .sizeText #{product.size.split(',')[1].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[1].split(':')[1]}
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[2].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[2].split(':')[1]}
+                                span.itemDetailPrice Price: $ #{product.price.toFixed(2)}
+                                //p #{product.type}
+                                //p #{product.add_on}
+                                form(method="get" action=("menu/add-to-cart/" + product._id))
+                                    button.addToCart add to cart
+                        
+                    br
+    h1#cake.menuTitle CAKE
+    .menucontainer
+        if(menu)
+            each product,id in menu
+                if(product.type==="CAKE")
+                    .itemContainer
+                        img.fooditempicture(src=product.link_address width='200px' height='200px')
+                        .itemContainerText
+                            span.snackname #{product.snack_name}
+                                
+                            span.itemPrice $ #{product.price.toFixed(2)}
+                            //p #{product.type}
+                            //p #{product.add_on}
+                            //p #{product.size}
+                            br
+                            br
+                            span.itemDetail #{product.mass}
+                            span.itemDetail |    
+                            span.itemDetail #{product.calories}
+                            button.btn(type="plus", onclick='myFunction(\'' + id + '\')') +
+                            .product_detail
+                                button.times(type="plus", onclick='myFunction(\'' + id + '\')')
+                                    icon.fas.fa-times.fa-3x
+                                img.foodDetail(src=product.link_address width='400px' height='400px')
+                                .snackname #{product.snack_name}
+                                .buttonContainer
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[0].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[0].split(':')[1]}
+                                    button.sizeMedium  
+                                        .sizeText #{product.size.split(',')[1].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[1].split(':')[1]}
+                                    button.size  
+                                        .sizeText #{product.size.split(',')[2].split(':')[0]} 
+                                        .sizePrice #{product.size.split(',')[2].split(':')[1]}
+                                span.itemDetailPrice Price: $ #{product.price.toFixed(2)}
+                                //p #{product.type}
+                                //p #{product.add_on}
+                                form(method="get" action=("menu/add-to-cart/" + product._id))
+                                    button.addToCart add to cart
+                        
+                    br
+
+script.
+    function myFunction(id) {
+        var x = document.getElementsByClassName("product_detail");
+        var body = document.body;
+        if (x[id].style.display === "block") {
+            x[id].style.display = "none";
+            body.style.overflow = "scroll";
+        } else {
+            x[id].style.display = "block";
+            body.style.overflow = "hidden";
+        }
+    };

@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/customer_order.css')
+    script(src="https://kit.fontawesome.com/d66b1d76b9.js" crossorigin='anonymous') 
+    block head
+body
+
+  span
+    a.icon(href="/customer/menu/dashboard")
+      icon.fas.fa-chevron-left
+  h1.header Order History
+  if(orders)
+    each order_item in orders
+        if(order_item.CustomerID === user.userID)
+            .each_order
+                p.time Order Time: 
+                span.sub_time  #{order_item.OrderedTime}
+                span.time Order status: #{order_item.OrderStatus}
+                .order_product
+                each snack in order_item.OrderedProduct
+                    p #{snack.snack_name} * #{snack.quantity}
+
+                .order_footer
+                  span.rating
+                    if(order_item.isRated === true)
+                      p you have rated this order 
+                    else
+                      form(action='/customer/customer_order/rating', method='POST')
+                        input(type="hidden" name="order_item" value = order_item)
+                        button.btn.btn-primary(type='submit') Rate this order
+                  span.price  $#{order_item.totalPrice} 
+                  form(action='/customer/customer_order', method='POST')
+                    input(type="hidden" name="OrderID" value= order_item.OrderID)
+                    button.btn(type="cancel") Cancel
+                  form(method="POST" action=("/customer/menu/change-to-cart/"))
+                    input(type="hidden" name ="OrderedProducts", value = order_item.OrderedProduct)
+                    button.addToCart Change
+                  
+
+
+
+
+  br
+  footer  NO MORE RESULT! 
+  br

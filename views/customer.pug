@@ -1,0 +1,45 @@
+a(href='/customer/menu') Menu
+
+script(src='https://unpkg.com/leaflet@1.4.0/dist/leaflet.js' integrity='sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==' crossorigin='')
+link(rel='stylesheet' href='https://unpkg.com/leaflet@1.4.0/dist/leaflet.css' integrity='sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==' crossorigin='')
+
+style.
+  #mymap {
+  height: 50%;
+  width: 50%;
+  }
+
+#mymap
+
+if(vendors)
+    each vendor in vendors 
+        if(vendor.isOpen === true)
+            h1 geolocation lat #{vendor.Latitude}
+            h1 geolocation lon #{vendor.Longitude}
+
+script. 
+    if('geolocation' in navigator){
+        console.log('geolocation available');
+        navigator.geolocation.getCurrentPosition(position => {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            console.log(lat, lon);
+            const mymap = L.map('mymap').setView([lat, lon], 15);
+            const attribution =
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+            const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tiles = L.tileLayer(tileUrl, { attribution });
+            tiles.addTo(mymap);
+            const marker = L.marker([lat, lon]).addTo(mymap);
+
+            var vendorIcon= L.icon({
+                iconUrl: '/images/cutlery.png',
+                iconSize: [32, 32],
+                iconAnchor: [25, 16]
+            })
+
+            const vendor_1 = L.marker([-37.7963, 144.9614], {icon: vendorIcon}).addTo(mymap);
+        })
+    } else {
+        console.log('geolocation not available');
+    }

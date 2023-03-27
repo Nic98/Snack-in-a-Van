@@ -1,0 +1,22 @@
+h1 Rate your order 
+if (errorMessage)
+    p #{errorMessage}
+if (successMessage)
+    p #{successMessage}
+if(order_detail)
+    h1 You ordered this order on #{order_detail.OrderedTime}
+    h1 What you ordered: 
+    each product in order_detail.OrderedProduct 
+        h1 #{product.quantity} #{product.snack_name}
+        br
+    form(action='/customer/customer_order/rating/review', method='POST')
+        .form-group
+            label(for='rating_score') Rate your experience out of 5
+            input(type='rating_score', name='rating_score')
+        .form-group
+            label(for='review') Write your review
+            input(type='review', name='review', placeholder='optional')
+        input(type="hidden" name="OrderID" value = order_detail.OrderID)
+        input(type="hidden" name="order_detail" value = order_detail)
+        button.btn.btn-primary(type='submit') Review
+

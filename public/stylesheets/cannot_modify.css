@@ -1,0 +1,46 @@
+body {
+    text-transform: uppercase;
+    background-color: #F0E9DC;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    color: #393939;
+}
+
+.icon {
+    font-size: 8px;
+    float: left;
+    padding: 10px 10px;
+    color:#000000;
+}
+
+.hi{
+    display:inline-block;
+    margin-left: -40px;
+    padding-left: -10px;
+    padding-top: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.warningUser {
+    line-height: 110px;
+    height: 100px;
+    background-color: whitesmoke;
+    opacity: 80%;
+    border-radius: 20px;
+    width: 70%;
+    text-align: center;
+    display: inline-block;
+}
+  
+.warningUser p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}

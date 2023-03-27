@@ -1,0 +1,255 @@
+.product_detail{
+    z-index: 10001;
+    display: none;
+    position: fixed;
+    background: rgb(245, 245, 245);
+    opacity: 97%;
+    border-radius: 30px;
+    text-align: center;
+    width: 90%;
+    height: 80%;
+    margin-left: 3%;
+    bottom: 10%;
+}
+.menuTitle{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 80px;
+}
+body{
+    background-color: antiquewhite;
+    font-size: 20px;
+    scroll-behavior: smooth;
+    text-align: center;
+    overflow: scroll;
+}
+img.fooditempicture{
+    border-radius: 150px;
+    float: left;
+    padding-left: 20px;
+}
+span.snackname{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 20px;
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+.snackname{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 30px;
+    font-size: 60px;
+    font-weight: bold;
+}
+.menucontainer{
+    background-color: rgb(253, 247, 239);
+    border-radius: 50px;
+    padding-bottom: 40px;
+}
+.itemContainer{
+    border-bottom: 5px grey solid;
+    padding-top: 50px;
+    padding-left: 20px;
+    height: 200px;
+    text-align: start;
+}
+.itemPrice{
+    font-size: 50px;
+    color: grey;
+    float: right;
+    padding-right: 40px;
+    padding-top: 10px;
+    
+}
+.itemDetailPrice{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    float: right;
+    padding: 100px 100px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.itemContainerText{
+    padding-top: 30px;
+}
+span.itemDetail{
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button.btn{
+    float: right;
+    padding: 5px 45px;
+    margin-right: 40px;
+    font-size: 40px;
+    border-radius: 30px;
+}
+.menuHeader{
+    z-index: 10000;
+   position: fixed;
+   top: 99px;
+   width: 100%;
+   background-color: antiquewhite;
+   height: 100px;
+   
+}
+a.navButton{
+    padding: 20px 50px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    border: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    
+    
+}
+a.navButton:hover{
+    box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    border-radius: 25px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.icon{
+    padding: 30px 30px;
+    color: black;
+    float: left
+
+}
+.header{
+    z-index: 10000;
+   position: fixed;
+   top: 0px;
+   width: 100%;
+   background-color: antiquewhite;
+   height: 100px;
+}
+.hi{
+    
+    padding: 40px 180px;
+    margin-top: 30px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    border: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.cart{
+    float:right;
+    padding: 30px 30px;
+    color: black;
+}
+button.times{
+    padding: 30px 30px;
+    float: right;
+    position: relative;
+    color: inherit;
+    opacity: inherit;
+    border: none;
+}
+img.foodDetail{
+    padding-top: 10%;
+    height: 20%;
+    width: auto;
+}
+.buttonContainer{
+   z-index: 10000;
+   top: 20%;
+   width: 90%;
+   margin-left: 5%;
+   background-color:white;
+   height: 10%;
+   border-radius: 25px;
+   
+}
+button.size{
+    text-align: center;
+    width: 30%;
+    height:100%;
+    background-color: white;
+    border:none;
+    border-radius: 25px;
+}
+button.sizeMedium{
+    text-align: center;
+    width: 40%;
+    height:100%;
+    background-color: white;
+    border-left: black , thick;
+    border-right: black, thick;
+    font-size: 30px;
+    border-top: none;
+    border-bottom: none;
+}
+button.size:focus,button.sizeMedium:focus{     
+    background-color:rgb(177, 177, 177);    
+}
+button:hover{
+    box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    border-radius: 25px;
+}
+.sizeText{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    
+    font-size: 40px;
+    font-weight: bold;
+}
+.sizePrice{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    
+    font-size: 30px;
+    font-weight:900;
+}
+.addToCart{
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    width: 50%;
+    background-color:white;
+    height: 100px;
+    border-radius: 25px;
+    text-align: center;
+    border: none;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+}
+.addToCartContainer{
+    z-index: 10000;
+    top: 99px;
+    margin-left: 200px;
+    margin-top: 200px;
+    width: 460px;
+    background-color:white;
+    height: 100px;
+    border-radius: 25px;
+    text-align: center;
+}
+.Qty{
+    padding: 15px 20px;
+    margin-top: 30px;
+    font-size: 30px;
+    border-radius: 30px;
+    background-color: grey;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    float: right;
+}

@@ -1,0 +1,172 @@
+body {
+    text-transform: uppercase;
+    background-color: #F0E9DC;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    color: #393939;
+}
+
+.icon {
+    font-size: 8px;
+    float: left;
+    padding: 10px 10px;
+    color:#000000;
+}
+
+.hi{
+    display:inline-block;
+    margin-left: -40px;
+    padding-left: -10px;
+    padding-top: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#countHeader{
+    font-family: 'Courier New', Courier, monospace;
+    display:inline-block;
+    font-size: 20px;
+    width: 350px;
+}
+
+#countdown{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+    background-color: #B7E5B9;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-top: -7px;
+    margin-bottom: 7px;
+    min-width: 100px;
+    font-size: 95px;
+    box-sizing: border-box;
+    width: 350px;
+    height: 150px;
+    box-shadow: 5px 3px 10px #969696;
+}
+
+#countdownFail{
+    font-family: 'Courier New', Courier, monospace;
+    display:inline-block;
+    font-size: 15px;
+    width: 350px;
+}
+
+button.addToCart{
+    min-width: 80px;
+    font-size: 25px;    
+    background-color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    border-color: FFFFFF;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 350px;
+    color: #393939;
+    border: none;
+}
+
+button.btn{
+    min-width: 80px;
+    font-size: 25px;    
+    background-color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    border-color: FFFFFF;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    width: 350px;
+    color: #393939;
+    border: none;
+}
+
+
+/* 
+.popup .overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index:1;
+    display:none;
+}
+   
+.popup .content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:#fff;
+    width:95%;
+    max-width:500px;
+    height:250px;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    font-family:"Open Sans",sans-serif;
+}
+   
+.popup .close-btn {
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    background:#222;
+    color:#fff;
+    font-size:25px;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius:50%;
+}
+
+.popup.active .overlay {
+    display:block;
+}
+
+.popup.active .content {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+button {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:15px;
+    font-size:18px;
+    border:2px solid #222;
+    color:#222;
+    text-transform:uppercase;
+    font-weight:600;
+    background:#fff;
+} */

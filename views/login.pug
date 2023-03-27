@@ -1,0 +1,51 @@
+html 
+    head 
+        meta(charset='UTF-8')
+        meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui')
+        // ios
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black')
+        meta(name='apple-touch-fullscreen' content='yes')
+        // qq
+        meta(name='x5-fullscreen' content='true')
+        meta(name='x5-page-mode' content='app')
+        // ms
+        meta(name='MobileOptimized' content='320')
+        link(rel='stylesheet', href='/stylesheets/login.css')
+        link(rel="javascript", href="../controllers/auto.js")
+        script.
+            var warning = document.getElementsByClassName("warning");
+            function dads(){
+                warning[0].style.display = "none";
+            };
+    body 
+        .title  LOGIN 
+        if (message)
+            if(message.length > 0)
+                .warning(onclick ="dads()",style="display:block",id=1)
+                    p #{message}
+                    p(class="ok") OK 
+        form(action='/customer/menu/login', method='POST')
+            .form-group
+                label(for='email') USERNAME/EMAIL
+                .input 
+                    input(type='email', name='email')
+            .form-group 
+                label(for='password') PASSWORD 
+                .input 
+                    input#password.form-control(type='password', name='password')
+            button.btn(type='submit') LOGIN 
+            .contact 
+                a(href="#" class ="red") GOOGLE 
+                .line | 
+                a(href="#" class ="blue") FACEBOOK 
+                .line |  
+                a(href="#" class ="darkblue") TWITTER 
+
+
+
+            a(href='/customer/menu/login/forgot_password' class="bottombtn1") Forgotten Password?
+            a(href='/customer/menu/login/register' class="bottombtn2") Create new account?

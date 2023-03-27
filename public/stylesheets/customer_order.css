@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #F0E9DC;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    font-size: 40px;
+    margin: 40px 100px 10px 0px;
+}
+
+.icon {
+    margin: -25px 0px 0px 0px;
+    float: left;
+    font-size: 40px;
+    padding: 25px 30px;
+    color:#000000;
+}
+
+.filter{
+    text-align: center;
+    margin: 0px 100px 10px 0px;
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+
+.time{
+    font-size: 45px;
+    display: inline-block;
+}
+
+.sub_time{
+    font-size: 40px;
+    color: grey;
+    font-style: italic;
+    margin: 0px 0px -11px 0px;
+    display: inline-block;
+    overflow: auto;
+    max-width: 12.5cm;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.each_order{
+    background: #FFFFFF;
+    width:830px;
+    padding: 10px 30px 10px 30px;
+    margin: 20px auto;
+    font-weight: lighter;
+    font-size: 55px;
+    border-radius: 25px;
+}
+
+.order_product{
+    margin: 20px 0px;
+
+}
+
+.order_footer{
+    display: flex;
+    margin-top: 10px;
+}
+
+.rating{
+    color:#960000;
+    font-size: 33px;
+    margin: 10px 0px 0px 0px;
+}
+
+.star{
+    font-size: 20px;
+}
+
+.price{
+    font-size: 50px;
+    padding: 0px 0px 0px 300px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.8em;
+}
