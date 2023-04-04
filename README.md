@@ -2,7 +2,6 @@
 # INFO30005 – Web Information Technologies
 
 # Group Project Repository
-# Deliverable 3 Front-end implementation and login feature
 
 **view the webpage in different perspectives**
 We designed the pages in iPhone X view but the features are also accessible in normal browser view. <br />
